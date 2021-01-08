@@ -68,9 +68,9 @@ void setupMachine(void)
 // Version infomation
 void menuInfo(void)
 {
-  const char *hardware = "Board   : BIGTREETECH_" HARDWARE_VERSION;
-  const char *firmware = "Firmware: " STRINGIFY(SOFTWARE_VERSION) " " __DATE__;
-  const char *author = "Author  : ThRo42";
+  const char *hardware = "Панель  : BIGTREETECH_" HARDWARE_VERSION;
+  const char *firmware = "Прошивка: " STRINGIFY(SOFTWARE_VERSION) " " __DATE__;
+  const char *author = "Автор   : ThRo42";
 
   u16 HW_X = (LCD_WIDTH - GUI_StrPixelWidth((u8 *)hardware)) / 2;
   u16 FW_X = (LCD_WIDTH - GUI_StrPixelWidth((u8 *)firmware)) / 2;

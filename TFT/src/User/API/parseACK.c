@@ -333,7 +333,7 @@ void parseACK(void)
       char *t = strtok(&dmaL2Cache[ack_index], "\"");
       if (strcmp(t, "0.0.0.0") == 0)
       {
-        statusScreen_setMsg((u8 *)echomagic, (u8 *)"Connecting...");
+        statusScreen_setMsg((u8 *)echomagic, (u8 *)"Подключение..");
         storeCmd("M409 K\"network.interfaces[0].actualIP\"\n"); //  перезапрашиваем до установления связи
       }
       else

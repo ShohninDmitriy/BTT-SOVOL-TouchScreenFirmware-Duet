@@ -31,8 +31,8 @@
 #endif
 
 // Debug disable, free pins for other function
-//#define DISABLE_JTAG  // free JTAG(PB3/PB4) for SPI3
-//#define DISABLE_DEBUG // free all pins
+#define DISABLE_JTAG  // free JTAG(PB3/PB4) for SPI3
+#define DISABLE_DEBUG // free all pins
 
 // LCD Backlight pin (PWM can adjust brightness)
 //#define LCD_LED_PIN            PA8
@@ -93,10 +93,10 @@
 
 // Extend function(PS_ON, filament_detect)
 #ifndef PS_ON_PIN
-  //#define PS_ON_PIN      PD12
+  #define PS_ON_PIN      PE3
 #endif
 #ifndef FIL_RUNOUT_PIN
-  //#define FIL_RUNOUT_PIN PD11
+  #define FIL_RUNOUT_PIN PB2
 #endif
 
 //#define LED_COLOR_PIN PC7

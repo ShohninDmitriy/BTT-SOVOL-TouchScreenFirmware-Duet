@@ -600,7 +600,7 @@ void menuStartPrinting(void)
   u16 key_num = IDLE_TOUCH;
 
   char buf[89];
-  sprintf(buf, "Do you want to start %.65s?\n", infoFile.title);
+  sprintf(buf, "Запустить %.65s?\n", infoFile.title);
 
   popupDrawPage(bottomDoubleBtn, textSelect(LABEL_INFO), (u8*)buf, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
 

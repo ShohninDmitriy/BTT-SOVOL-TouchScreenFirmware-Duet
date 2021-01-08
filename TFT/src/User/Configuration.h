@@ -46,8 +46,8 @@
  */
 #define DEFAULT_LCD_BRIGHTNESS 10      // 11: LCD_100_PERCENT - Brightness value from list
 #define DEFAULT_LCD_IDLE_BRIGHTNESS 10 // 2: LCD_10_PERCENT - Brightness value from list
-#define DEFAULT_LCD_IDLE_TIMER 1       // 1: LCD_DIM_OFF
-#define LCD_DIM_CUSTOM_SECONDS 600     // Custom value in seconds. Will be used if \
+#define DEFAULT_LCD_IDLE_TIMER 6       // 1: LCD_DIM_OFF
+#define LCD_DIM_CUSTOM_SECONDS 600     // Custom value in seconds. Will be used if 
                                       // LCD_DIM_CUSTOM_SECONDS is set as idle timer.
 
 //===========================================================================
@@ -75,7 +75,7 @@
  *  Options:  0: Disabled. RECOMMENDED FOR TFT24
  *            1: Enabled Marlin Fullscreen mode.
  */
-#define DEFAULT_ST7920_FULLSCREEN_MODE 1 // 0: Disabled. RECOMMENDED FOR TFT24
+#define DEFAULT_ST7920_FULLSCREEN_MODE 0 // 0: Disabled. RECOMMENDED FOR TFT24
 
 /**
  * Clean Mode Switching Support
@@ -110,7 +110,7 @@
  *
  * Options: ARMENIAN, CHINESE, CZECH, DUTCH, ENGLISH, FRENCH, GERMAN, HUNGARIAN, ITALIAN, JAPANESE, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SPAIN
  */
-#define DEFAULT_LANGUAGE GERMAN
+#define DEFAULT_LANGUAGE RUSSIAN
 
 /**
  *  Show bootscreen when starting up
@@ -140,21 +140,21 @@
 
 #define TOOL_NUM 1     // set in 1~6
 #define EXTRUDER_NUM 1 // set in 1~6
-#define FAN_NUM 2      // set in 1~6
+#define FAN_NUM 1      // set in 1~6
 
 //                       PLA      PETG       ABS
 #define PREHEAT_BED \
   {                 \
-    60, 70, 100     \
+    60, 70, 105     \
   }
 #define PREHEAT_HOTEND \
   {                    \
-    200, 230, 230      \
+    200, 230, 235      \
   }
 
 #define HEAT_MAX_TEMP                 \
   {                                   \
-    150, 275, 275, 275, 275, 275, 275 \
+    130, 275, 275, 275, 275, 275, 275 \
   } //max temperature can be set
 #define HEAT_SIGN_ID                               \
   {                                                \
@@ -209,24 +209,24 @@
 // Default move speed mm/min
 #define DEFAULT_SPEED_MOVE 6000
 #define SPEED_MOVE_SLOW 3000
-#define SPEED_MOVE_FAST 10000
+#define SPEED_MOVE_FAST 9000
 
 // Extrude speed mm/min
 #define EXTRUDE_SLOW_SPEED 60
-#define EXTRUDE_NORMAL_SPEED 600
-#define EXTRUDE_FAST_SPEED 1200
+#define EXTRUDE_NORMAL_SPEED 120
+#define EXTRUDE_FAST_SPEED 240
 
 // Size of machine
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 280
-#define Y_MAX_POS 238
-#define Z_MAX_POS 270
+#define X_MAX_POS 385
+#define Y_MAX_POS 285
+#define Z_MAX_POS 295
 
 // Specify a pause position as { X, Y, Z_raise }
-#define NOZZLE_PAUSE_RETRACT_LENGTH 15           // (mm)
-#define NOZZLE_RESUME_PURGE_LENGTH 16            // (mm)
+#define NOZZLE_PAUSE_RETRACT_LENGTH 5           // (mm)
+#define NOZZLE_RESUME_PURGE_LENGTH 6            // (mm)
 #define NOZZLE_PAUSE_X_POSITION (X_MIN_POS + 10) // (mm) Must be an integer
 #define NOZZLE_PAUSE_Y_POSITION (Y_MIN_POS + 10) // (mm) Must be an integer
 #define NOZZLE_PAUSE_Z_RAISE 20                  // (mm)
@@ -323,21 +323,21 @@
  *
  * CUSTOM_X_LABEL is the name of the custom button, CUSTOM_X_GCODE is the G-code to be sent by the custom button, this should always end with a New-Line character '\n'
  */
-#define CUSTOM_0_LABEL "Disable Steppers"
+#define CUSTOM_0_LABEL "Обесточить Шаговики"
 #define CUSTOM_0_GCODE "M84\n"
 #define CUSTOM_1_LABEL "G32"
 #define CUSTOM_1_GCODE "G32\n"
 #define CUSTOM_2_LABEL "M409 Kjob"
 #define CUSTOM_2_GCODE "M409 K\"job\"\n"
-#define CUSTOM_3_LABEL "Allow move without home"
+#define CUSTOM_3_LABEL "Движение без самонаведения"
 #define CUSTOM_3_GCODE "M564 H0\n"
-#define CUSTOM_4_LABEL "Allow Extrude"
+#define CUSTOM_4_LABEL "Движение Extrude"
 #define CUSTOM_4_GCODE "M302 P1\n"
 #define CUSTOM_5_LABEL "G29"
 #define CUSTOM_5_GCODE "G29\n"
-#define CUSTOM_6_LABEL "Restore from EEPROM"
+#define CUSTOM_6_LABEL "Востановить из EEPROM"
 #define CUSTOM_6_GCODE "M501\n"
-#define CUSTOM_7_LABEL "EEPROM Defaults"
+#define CUSTOM_7_LABEL "EEPROM сброс"
 #define CUSTOM_7_GCODE "M502\n"
 //#define CUSTOM_8_LABEL "Custom8"
 //#define CUSTOM_8_GCODE "M105\n"
