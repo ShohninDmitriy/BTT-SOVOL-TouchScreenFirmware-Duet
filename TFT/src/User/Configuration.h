@@ -46,7 +46,7 @@
  */
 #define DEFAULT_LCD_BRIGHTNESS 10      // 11: LCD_100_PERCENT - Brightness value from list
 #define DEFAULT_LCD_IDLE_BRIGHTNESS 10 // 2: LCD_10_PERCENT - Brightness value from list
-#define DEFAULT_LCD_IDLE_TIMER 6       // 1: LCD_DIM_OFF
+#define DEFAULT_LCD_IDLE_TIMER 1       // 1: LCD_DIM_OFF
 #define LCD_DIM_CUSTOM_SECONDS 600     // Custom value in seconds. Will be used if 
                                       // LCD_DIM_CUSTOM_SECONDS is set as idle timer.
 
@@ -337,8 +337,8 @@
 #define CUSTOM_5_GCODE "G29\n"
 #define CUSTOM_6_LABEL "Востановить из EEPROM"
 #define CUSTOM_6_GCODE "M501\n"
-#define CUSTOM_7_LABEL "EEPROM сброс"
-#define CUSTOM_7_GCODE "M502\n"
+//#define CUSTOM_7_LABEL "EEPROM сброс"
+//#define CUSTOM_7_GCODE "M502\n"
 //#define CUSTOM_8_LABEL "Custom8"
 //#define CUSTOM_8_GCODE "M105\n"
 //#define CUSTOM_9_LABEL "Custom9"
