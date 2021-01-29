@@ -73,18 +73,18 @@ int main(void)
 
   Hardware_GenericInit();
   /* Watchdog Setup - Base frequency 40kHz */
-  IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
-  IWDG_SetPrescaler(IWDG_Prescaler_256);
-  IWDG_SetReload(WATCHDOC_TIMEOUT); // should be about 1/256s * 3000 should be about 20s
+  //IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
+  //IWDG_SetPrescaler(IWDG_Prescaler_256);
+  //IWDG_SetReload(WATCHDOC_TIMEOUT); // should be about 1/256s * 3000 should be about 20s
 
   //Calculate the frequency in s : wd-time =  1 / (40kHz/prescaler) * reload value
-  IWDG_ReloadCounter();
-  IWDG_Enable();
-  BUZZER_PLAY(sound_ok);
+  //IWDG_ReloadCounter();
+  //IWDG_Enable();
+  //BUZZER_PLAY(sound_ok);
 
   for (;;)
   {
     (*infoMenu.menu[infoMenu.cur])();
-    IWDG_ReloadCounter(); // and call the wdg
+    //IWDG_ReloadCounter(); // and call the wdg
   }
 }

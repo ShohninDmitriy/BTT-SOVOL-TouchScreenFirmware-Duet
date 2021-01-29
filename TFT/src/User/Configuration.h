@@ -377,6 +377,6 @@
 // #define THRO42_DEBUG
 
 // Watchdoc timeout
-#define WATCHDOC_TIMEOUT 3000 // should be about 1/256s * 3000 should be about 20s
+//#define WATCHDOC_TIMEOUT 1000000 // should be about 1/256s * 3000 should be about 20s
 
 #endif
